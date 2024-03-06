@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/websocket.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Socket IO</title>
+  </head>
+  <body>
+    <form action="chat.html">
+      <div class="container">
+        <div class="row">
+          <select name="select_room" id="select_room">
+            <option value="-1">Selecione a sala</option>
+            <option value="node">node</option>
+            <option value="java">java</option>
+            <option value="reactjs">reactjs</option>
+            <option value="vue">vue</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="username" class="form-label">Digite seu usuario</label>
+          <input type="text" name="username" placeholder="username" />
+        </div>
+
+        <div class="row">
+          <button type="submit" class="btn">Entrar</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

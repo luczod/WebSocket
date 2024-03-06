@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/websocket.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Chat</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <button type="button" id="logout" class="btn">Logout</button>
+        <div id="username"></div>
+        <hr />
+
+        <div id="chat_content">
+          <div id="messages" class="messages">
+            <!-- <div class="new_messages">
+              <div class="from-label"><strong>username</strong> <span>Text0 - 22/1/00</span></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <input
+        id="messages_input"
+        type="text"
+        class="form-control"
+        placeholder="Digite sua message"
+      />
+      <footer></footer>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"
+      integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

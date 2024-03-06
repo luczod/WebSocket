@@ -1,0 +1,12 @@
+{
+  "code-runner.executorMap": {
+    "typescript": "node -r sucrase/register"
+  },
+  "code-runner.clearPreviousOutput": true,
+  "vsicons.associations.folders": [
+    {
+      "icon": "component",
+      "extensions": ["classes"]
+    }
+  ]
+}
