@@ -1,24 +1,24 @@
 import { Socket } from 'socket.io';
 import { io } from './http';
 
-interface IRoom {
+type TRoom = {
   socket_id: string;
   username: string;
   room: string;
-}
+};
 
-interface IMessage {
+type TMessage = {
   room: string;
   text: string;
   createdAt: Date;
   username: string;
-}
+};
 
-const users: IRoom[] = [];
-const messages: IMessage[] = [];
+const users: TRoom[] = [];
+const messages: TMessage[] = [];
 
 io.on('connection', (socket: Socket) => {
-  socket.on('select_room', (data: Omit<IRoom, 'socket_id'>, calllback) => {
+  socket.on('select_room', (data: Omit<TRoom, 'socket_id'>, calllback) => {
     socket.join(data.room);
 
     const usersInRoom = users.find(
@@ -41,7 +41,7 @@ io.on('connection', (socket: Socket) => {
 
   socket.on('message', (data) => {
     // save
-    const message: IMessage = {
+    const message: TMessage = {
       room: data.room,
       username: data.username,
       text: data.message,
